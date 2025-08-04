@@ -4,6 +4,7 @@ describe('Login', () => {
     cy.visit('http://localhost:4000')
     cy.screenshot('apos-visitar-pagina')
   })
+
   it('Login com dados válidos deve permitir acesso ao sistema', () => {
     // Act
     cy.get('#username').click().type('julio.lima')
