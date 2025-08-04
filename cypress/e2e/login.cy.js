@@ -5,13 +5,13 @@ describe('Login', () => {
     cy.screenshot('apos-visitar-pagina')
   })
 
-  it.only('Login com dados válidos deve permitir acesso ao sistema', () => {
+  it('Login com dados válidos deve permitir acesso ao sistema', () => {
     // Act
     cy.get('#username').click().type('julio.lima')
     cy.get('#senha').click().type('123456')
-    cy.screenshot('apos-preencher-dados-validos')
+    cy.screenshot('após-preencher-dados-validos')
     cy.contains('button', 'Entrar').click()
-    cy.screenshot('apos-clicar-no-botao-entrar')
+    cy.screenshot('após-clicar-no-botao-entrar')
 
     // Assert
     cy.contains('h4', 'Realizar Transferência').should('be.visible')
