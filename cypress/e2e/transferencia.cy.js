@@ -6,7 +6,7 @@ describe('Tranferencias', () => {
 
     it('Deve transferir quando informo dados e valor válidos', () => {
         // Act
-        cy.realizarTransferencia('Joao', 'Maria', '11')
+        cy.realizarTransferencia('João', 'Maria', '11')
 
         // Assert
         cy.verificarMensagemNoToast('Transferência realizada!')
@@ -14,7 +14,7 @@ describe('Tranferencias', () => {
 
     it('Deve apresentar erro quando tentar transferir mais que 5 mil sem informar token', () => {
         // Act
-        cy.realizarTransferencia('Joao', 'Maria', '6000')
+        cy.realizarTransferencia('João', 'Maria', '6000')
 
         //Assert
         cy.verificarMensagemNoToast('Autenticação necessária para transferência acima de R$5.000.00.')

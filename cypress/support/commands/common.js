@@ -1,5 +1,5 @@
 Cypress.Commands.add('verificarMensagemNoToast', mensagem => {
-cy.get('.toast').should('have.text', mensagem)
+    cy.get('.toast').should('have.text', mensagem)
 
 })
 
